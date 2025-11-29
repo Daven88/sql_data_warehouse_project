@@ -36,17 +36,23 @@ These insights empower stakeholders with key business metrics, enabling strategi
 
 Data Sources
 Two datasets representing an ERP and CRM system, supplied as CSV files.
+
 Data Cleaning & Quality Checks
 Handling missing values, correcting data types, resolving inconsistencies, and enforcing referential integrity.
+
 Data Integration
 Consolidating both datasets into staging tables, transforming them, and loading them into a dimensional model.
+
 Data Model
+
 Star schema including:
 Fact table (Sales)
 Dimension tables (Customer, Product, Date, etc.)
+
 Assumptions
  - Only current records are required (no historical tracking).
  - Focus is on analytical readiness rather than operational reporting.
+
 Documentation
 ERD diagrams and process notes are provided to support stakeholders and demonstrate understanding of warehouse design.
 
