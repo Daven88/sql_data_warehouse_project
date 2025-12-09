@@ -1,20 +1,21 @@
 # Data Dictionary for Gold Layer #
 
-## Overview ##
+## Overview
 
 The Gold Layer is the business level data representation, structured to support analytical and reporting use cases. It consists of **dimension
 tables** and **fact tables** for specific business metrics
-======================================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------------
 
 ### 1. gold.dim_customers
-   . Purpose: Stores customer details enriched with demographic and geographic data.
-   . Columns:
+   - Purpose: Stores customer details enriched with demographic and geographic data.
+   - Columns:
 
    | Column Name     | Data Type    | Description                                                                     |
    |-----------------|--------------|---------------------------------------------------------------------------------|
    | customer_key    | INT          | Surrogate key uniquely identifying each customer record in the dimension table. |
    | customer_id     | INT          | Unique numerical identifier assigned to each customer.                          |
-   | customer_number | NVARCHAR(50) | Alphanumeric identifies assigned to each customer.                              |
+   | customer_number | NVARCHAR(50) | Alphanumeric identifier assigned to each customer.                              |
    | first_name      | NVARCHAR(50) | The customer's first name, as recorded in the system.                           |
    | last_name       | NVARCHAR(50) | The customer's last name or family name.                                        |
    | country         | NVARCHAR(50) | The country of residence for the customer (e.g. 'Australia').                   |
@@ -23,15 +24,15 @@ tables** and **fact tables** for specific business metrics
    | birthdate       | DATE         | The date of birth of the customer, formatted as YYYY-MM-DD (e.g. 1971-10-06).   |
    | create_date     | DATE         | The date and time when the customer record was created in the system.           |
    
-   =====================================================================================================================
+-----------------------------------------------------------------------------------------------------------------------
 
 ### 2. gold.dim_products
-   . Purpose: Provides information about the products and their attributes.
-   . Columns:
+   - Purpose: Provides information about the products and their attributes.
+   - Columns:
 
    | Column Name          | Data Type    | Description                                                                                |
    |----------------------|--------------|--------------------------------------------------------------------------------------------|
-   | product_key          | INT          | Surrogate keu uniquely identifying each product record in the product dimension table.     |
+   | product_key          | INT          | Surrogate key uniquely identifying each product record in the product dimension table.     |
    | product_id           | INT          | A unique identifier assigned to the product for internal tracking and referencing.         |
    | product_number       | NVARCHAR(50) | A structured alphanumeric code representing the product, often used for categorisation     |
    |                      |              |  or inventory.                                                                             |
@@ -44,9 +45,11 @@ tables** and **fact tables** for specific business metrics
    | product_line         | NVARCHAR(50) | The specific product line or series to which the product belongs (e.g. Road, Mountain)     |
    | start_date           | DATE         | The date when the product became available for sale or use.                                |
 
+-----------------------------------------------------------------------------------------------------------------------
+
 ### 3. gold.fact_sales
-   . Purpose: Stores transactional sales data for analytical purposes.
-   . Columns:
+   - Purpose: Stores transactional sales data for analytical purposes.
+   - Columns:
 
    | Column Name     | Data Type    | Description                                                                                   |
    |-----------------|--------------|-----------------------------------------------------------------------------------------------|
