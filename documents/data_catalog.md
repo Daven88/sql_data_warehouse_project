@@ -6,7 +6,7 @@ The Gold Layer is the business level data representation, structured to support 
 tables** and **fact tables** for specific business metrics
 ============================================================================================================================================
 
-###1. gold.dim_customers
+### 1. gold.dim_customers
    . Purpose: Stores customer details enriched with demographic and geographic data.
    . Columns:
 
@@ -25,7 +25,7 @@ tables** and **fact tables** for specific business metrics
    
    ============================================================================================================================================
 
-###2. gold.dim_products
+### 2. gold.dim_products
    . Purpose: Provides information about the products and their attributes.
    . Columns:
 
@@ -34,7 +34,7 @@ tables** and **fact tables** for specific business metrics
    | product_key          | INT          | Surrogate keu uniquely identifying each product record in the product dimension table.     |
    | product_id           | INT          | A unique identifier assigned to the product for internal tracking and referencing.         |
    | product_number       | NVARCHAR(50) | A structured alphanumeric code representing the product, often used for categorisation     |
-                                         |  or inventory.                                                                             |
+   |                      |              |  or inventory.                                                                             |
    | product_name         | NVARCHAR(50) | Descriptive name of the product, including key details such as type, colour and size.      |
    | category_id          | NVARCHAR(50) | A unique identifier for the product's category, linking to it high level classification.   |
    | category             | NVARCHAR(50) | The broader classification of the product (e.g. Bikes, Components) to group related items. |
@@ -44,7 +44,7 @@ tables** and **fact tables** for specific business metrics
    | product_line         | NVARCHAR(50) | The specific product line or series to which the product belongs (e.g. Road, Mountain)     |
    | start_date           | DATE         | The date when the product became available for sale or use.                                |
 
-###3. gold.fact_sales
+### 3. gold.fact_sales
    . Purpose: Stores transactional sales data for analytical purposes.
    . Columns:
 
